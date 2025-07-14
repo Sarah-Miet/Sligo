@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>My Sligo Trip</title>
+
+
+
+
+    <style>
+        html {
+            font-size: 18px;
+            /* Grundgröße für die ganze Seite */
+        }
+
+        h1.display-1 {
+            font-size: 3.0rem;
+        }
+
+        h2.display-2 {
+            font-size: 3.0rem;
+        }
+
+        h3.display-3 {
+            font-size: 3.0rem;
+        }
+
+        p {
+            font-size: 1.0rem;
+        }
+
+        h2 {
+            color: forestgreen;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .display-1,
+        .display-2,
+        .display-3 {
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .imageF {
+            width: 500px;
+            aspect-ratio: 6 / 5;
+            object-fit: cover;
+            border: 2px solid black;
+            display: block;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 150px;
+            padding: 30px;
+        }
+
+        .image-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            max-width: 520px;
+        }
+
+
+        .imageleafl {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .imageleafr {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+<div id="pw-overlay" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(255, 255, 255, 0.975);z-index:9999;display:flex;align-items:center;justify-content:center;">
+    <form id="pw-form" style="background:#f6f6f6;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.12);padding:40px 32px;min-width:320px;text-align:center;">
+        <h2 style="margin-bottom:24px;color:#2d78b9;">Willkommen!</h2>
+        <label for="pw-input" style="font-size:1.1rem;color:#333;">Bitte Passwort eingeben:</label><br>
+        <input type="password" id="pw-input" style="margin:16px 0 8px 0;padding:10px 16px;font-size:1.1rem;border-radius:8px;border:1px solid #ccc;width:80%;" autofocus />
+        <br>
+        <button type="submit" style="background:#2d78b9;color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:1.1rem;cursor:pointer;transition:background 0.2s;">Login</button>
+        <p id="pw-error" style="color:#d32f2f;display:none;margin-top:16px;">Falsches Passwort! Bitte versuche es erneut.</p>
+    </form>
+</div>
+
+    <header>
+        <button id="VideoButton">To videos</button>
+        <button id="MemberButton">To members</button>
+
+    </header>
+    <hr>
+
+    <img class="imageleafl" src="images/Bild1.png" alt="leaf" />
+    <img class="imageleafr" src="images/Bild1.png" alt="leaf" />
+
+
+
+    <div class="text-center">
+        <h1 class="display-1" style="font-family: 'Times New Roman', Times, serif;">Ireland 2025</h1>
+        <h2 class="display-2">Sligo</h2>
+    </div>
+
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/1W/FlugnIrland_2.jpg" alt="Flug nach Irland" />
+            <p> Flying to Ireland</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/1W/FlugnIrland_1.jpg" alt="Flug nach Irland 2" />
+            <p>Landing in Irland</p>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h3 style=" color: goldenrod;" class="display-3">First Week</h3>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/1W/1Whouse.jpg" alt="f4" />
+            <p> Sligo</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/1W/1Wchurch.jpg" alt=" f3" />
+            <p>Strandhill Church</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/1W/1Wseagull.jpg" alt="f2" />
+            <p> President of Galway</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/1W/1Wkath.jpg" alt=" f1" />
+            <p>Galway Cathedral</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/1W/1Wsun.jpg" alt="f2" />
+            <p> Strandhill</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/1W/1Wsun2.jpg" alt=" f1" />
+            <p>Strandhill</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/1W/1WRossespoint.jpg" alt="f2" />
+            <p> Rossespoint Church</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/1W/1WRossespointbeach.jpg" alt=" f1" />
+            <p>Rossespoint Beach</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/1W/1WRossespointwater.jpg" alt="f2" />
+            <p> Rossespoint Beach</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/1W/1WRossesphicks.jpg" alt=" f1" />
+            <p> Best Painting in the world</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/1W/girlsbild.jpg" alt="f2" />
+            <p> girls</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/1W/pupgirls.jpg" alt=" f1" />
+            <p> cola and rum</p>
+        </div>
+    </div>
+
+
+    <div class="text-center">
+        <h3 style=" color: green;" class="display-3">Second Week</h3>
+    </div>
+
+
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/2Wgirlsbeach.jpg" alt="f2" />
+            <p> Fun</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/2Wgirlsbech2.jpg" alt=" f1" />
+            <p> :)</p>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/whatsapp bild 2025-07-03 um 10.53.26_6f5e3a36.jpg" />
+            <p> Seba</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0066.jpg" />
+            <p> Day Drinking</p>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0089.jpg" />
+            <p> Abbeyquarter North</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0079.jpg" />
+            <p> Abbeyquarter North</p>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0072.jpg" />
+            <p> "Big Mountain"</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0078.jpg" />
+            <p> Greeen</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/whatsapp bild 2025-07-03 um 11.44.43_2dfd1683.jpg" />
+            <p> Sunny</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/whatsapp bild 2025-07-03 um 11.44.43_5f6ba777.jpg" />
+            <p> WOW</p>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0085.jpg" />
+            <p> Swagman</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0084.jpg" />
+            <p> Swagman</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0087.jpg" />
+            <p> Working</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0091.jpg" />
+            <p> Working</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0090.jpg" />
+            <p> Bia Bao</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250703-wa0092.jpg" />
+            <p> Food</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0021.jpg" />
+            <p> Mountain</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0022.jpg" />
+            <p> Green</p>
+        </div>
+
+    </div>
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0011.jpg" />
+            <p> coooold!!!</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/img-20250708-wa0005.jpg" />
+            <p> </p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0026.jpg" />
+            <p> coooold!!!</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/whatsapp bild 2025-07-08 um 13.32.51_c529eda6.jpg" />
+            <p> </p>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/whatsapp bild 2025-07-08 um 13.27.36_cd1ce30f.jpg" />
+            <p> School </p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0023.jpg" />
+            <p> Horse Shoe</p>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0012.jpg" />
+            <p> Yuhuu!</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0010.jpg" />
+            <p> Go Sligo Rovers</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0009.jpg" />
+            <p> :</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0013.jpg" />
+            <p>  </p>
+        </div>
+    </div>
+
+
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/whatsapp bild 2025-07-07 um 10.11.37_16ab0098.jpg" />
+            <p> best surfer</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0024.jpg" />
+            <p> best surfer</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/whatsapp bild 2025-07-07 um 10.11.37_a11a8582.jpg" />
+            <p> smile :</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/mehr/img-20250708-wa0025.jpg" />
+            <p> sleeping</p>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src="images/2W/whatsapp bild 2025-07-07 um 10.11.37_84fae518.jpg" />
+            <p> Surfing</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src="images/2W/whatsapp bild 2025-07-07 um 10.11.37_fa4d8cd7.jpg" />
+            <p> Surfing</p>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h3 style=" color: goldenrod;" class="display-3">Third Week</h3>
+    </div>
+
+   <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src= "images/3W/WhatsApp Bild 2025-07-09 um 23.05.17_f384cff7.jpg" alt="f2" />
+            <p> Strandhill</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src= "images/3W/WhatsApp Bild 2025-07-09 um 23.05.35_308a8017.jpg" alt="f2" />
+            <p> Strandhill</p>
+        </div>
+    </div>
+
+
+   <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src= "images/3W/WhatsApp Bild 2025-07-09 um 23.05.35_308a8017.jpg" alt="f2" />
+            <p> Strandhill</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src= "images/3W/WhatsApp Bild 2025-07-09 um 23.05.59_586e0ebf.jpg" alt="f2" />
+            <p> Strandhill</p>
+        </div>
+    </div>
+
+
+
+
+   <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src= "images/3W/WhatsApp Bild 2025-07-09 um 23.16.09_76f762ee.jpg" alt="f2" />
+            <p> Strandhill</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src= "images/3W/WhatsApp Bild 2025-07-09 um 21.46.21_78b9dcbc.jpg" alt="f2" />
+            <p> Strandhill</p>
+        </div>
+    </div>
+
+ <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src= "images/3W/IMG-20250711-WA0009.jpg" alt="f2" />
+            <p> Far Finsklin</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src= "images/3W/IMG-20250711-WA0021.jpg" alt="f2" />
+            <p> Far Finsklin</p>
+        </div>
+
+    </div>
+ <div class="image-container">
+        <div class="image-box">
+            <img class="imageF" src= "images/3W/IMG-20250711-WA0020.jpg" alt="f2" />
+            <p> Far Finsklin</p>
+        </div>
+        <div class="image-box">
+            <img class="imageF" src= "images/3W/IMG-20250711-WA0019.jpg" alt="f2" />
+            <p> Far Finsklin</p>
+        </div>
+    </div>
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const ENCODED_PW = "Y3J1Y2t5"; // "crucky"
+    const STORAGE_KEY = "sligo_pw_ok";
+    const overlay = document.getElementById("pw-overlay");
+    const form = document.getElementById("pw-form");
+    const input = document.getElementById("pw-input");
+    const error = document.getElementById("pw-error");
+
+    function decode(str) {
+        return atob(str);
+    }
+
+    // Prüfe, ob Passwort schon eingegeben wurde (nur für diese Sitzung)
+    if (sessionStorage.getItem(STORAGE_KEY) === "1") {
+        overlay.style.display = "none";
+    }
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        if (input.value === decode(ENCODED_PW)) {
+            overlay.style.display = "none";
+            sessionStorage.setItem(STORAGE_KEY, "1");
+        } else {
+            error.style.display = "block";
+            input.value = "";
+            input.focus();
+        }
+    });
+
+    input.addEventListener("input", function() {
+        error.style.display = "none";
+    });
+});
+</script>
+
+
+</body>
+
+<script src="script.js" defer></script>
+
+</html>
