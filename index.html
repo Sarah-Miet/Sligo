@@ -103,17 +103,7 @@
         }
 
 
-
-        /* ...dein bestehender Code... */
-
-/* Skalierung für kleine Bildschirme */
-@media (max-width: 900px) {
-    body {
-        /* Alles etwas kleiner skalieren */
-        transform: scale(0.85);
-        transform-origin: top left;
-        width: 117.6vw; /* 100 / 0.85 */
-    }
+    @media (max-width: 900px) {
     h1.display-1, h2.display-2, h3.display-3 {
         font-size: 2.2rem;
     }
@@ -127,14 +117,14 @@
     .image-box {
         max-width: 340px;
     }
-}
-
-/* Noch kleiner für sehr kleine Handys */
-@media (max-width: 600px) {
-    body {
-        transform: scale(0.7);
-        width: 142.8vw; /* 100 / 0.7 */
+    .image-container {
+        gap: 32px;
+        padding: 16px;
     }
+     }
+
+
+   @media (max-width: 600px) {
     h1.display-1, h2.display-2, h3.display-3 {
         font-size: 1.5rem;
     }
@@ -143,11 +133,18 @@
     }
     .imageF {
         max-width: 220px;
+        width: 100%;
     }
     .image-box {
         max-width: 240px;
     }
+    .image-container {
+        gap: 1px;
+        padding: 2px;
+    }
 }
+
+
     </style>
 
 
