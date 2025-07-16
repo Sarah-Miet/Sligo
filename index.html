@@ -283,7 +283,7 @@
 
     <div class="image-container">
         <div class="image-box">
-            <img class="imageF" src="images/2W/whatsapp bild 2025-07-03 um 10.53.26_6f5e3a36.jpg" />
+            <img class="imageF" src="images/2W/WhatsApp Bild 2025-07-03 um 10.53.26_6f5e3a36.jpg" />
             <p> Seba</p>
         </div>
         <div class="image-box">
@@ -604,29 +604,29 @@
     </div>
 
     
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const ENCODED_PW = "Y3J1Y2t5"; // "crucky"
+    const HASHED_PW = "68772d2184abcd13e8644060375aaed6f83234871270d614f00d8b3a9d260768"; 
     const STORAGE_KEY = "sligo_pw_ok";
     const overlay = document.getElementById("pw-overlay");
     const form = document.getElementById("pw-form");
     const input = document.getElementById("pw-input");
     const error = document.getElementById("pw-error");
 
-    function decode(str) {
-        return atob(str);
-    }
-
-    // Prüfe, ob Passwort schon eingegeben wurde (nur für diese Sitzung)
     if (sessionStorage.getItem(STORAGE_KEY) === "1") {
         overlay.style.display = "none";
     }
 
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        if (input.value === decode(ENCODED_PW)) {
+    form.addEventListener("submit", async function(e) {
+        e.preventDefault(); // Verhindert das Neuladen der Seite
+        const pw = input.value;
+        const hashed = await hashPassword(pw);
+
+        console.log("Eingegeben:", pw);
+        console.log("Berechneter Hash:", hashed);
+        console.log("Gespeicherter Hash:", HASHED_PW);
+
+        if (hashed === HASHED_PW) {
             overlay.style.display = "none";
             sessionStorage.setItem(STORAGE_KEY, "1");
         } else {
@@ -639,12 +639,21 @@ document.addEventListener("DOMContentLoaded", function() {
     input.addEventListener("input", function() {
         error.style.display = "none";
     });
+
+    async function hashPassword(pw) {
+        const data = new TextEncoder().encode(pw);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+    }
 });
 </script>
 
 
+
+
 </body>
 
-<script src="script.js" defer></script>
+
 
 </html>
