@@ -154,12 +154,13 @@
 
 <div id="pw-overlay" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(255, 255, 255, 0.975);z-index:9999;display:flex;align-items:center;justify-content:center;">
     <form id="pw-form" style="background:#f6f6f6;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.12);padding:40px 32px;min-width:320px;text-align:center;">
-        <h2 style="margin-bottom:24px;color:#2d78b9;">Willkommen!</h2>
+        <h2 style="margin-bottom:24px;color:#cc19bd;">Willkommen!</h2>
         <label for="pw-input" style="font-size:1.1rem;color:#333;">Bitte Passwort eingeben:</label><br>
         <input type="password" id="pw-input" style="margin:16px 0 8px 0;padding:10px 16px;font-size:1.1rem;border-radius:8px;border:1px solid #ccc;width:80%;" autofocus />
         <br>
         <button type="submit" style="background:#2d78b9;color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:1.1rem;cursor:pointer;transition:background 0.2s;">Login</button>
         <p id="pw-error" style="color:#d32f2f;display:none;margin-top:16px;">Falsches Passwort! Bitte versuche es erneut.</p>
+     
     </form>
 </div>
 
@@ -170,9 +171,11 @@
     </header>
     <hr>
 
+    <script src="script.js" defer></script>
     <img class="imageleafl" src="images/Bild1.png" alt="leaf" />
     <img class="imageleafr" src="images/Bild1.png" alt="leaf" />
 
+    
 
 
     <div class="text-center">
@@ -603,7 +606,54 @@
         <h3 style=" color: green;" class="display-3">Fourth Week</h3>
 </div>
 
+ 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const HASHED_PW = "68772d2184abcd13e8644060375aaed6f83234871270d614f00d8b3a9d260768"; 
+    const STORAGE_KEY = "sligo_pw_ok";
+    const overlay = document.getElementById("pw-overlay");
+    const form = document.getElementById("pw-form");
+    const input = document.getElementById("pw-input");
+    const error = document.getElementById("pw-error");
 
+    if (sessionStorage.getItem(STORAGE_KEY) === "1") {
+        overlay.remove();
+        sessionStorage.setItem(STORAGE_KEY, "1");
+        setupButtons(); // falls nötig
+    }
+
+    form.addEventListener("submit", async function(e) {
+        e.preventDefault(); // Verhindert das Neuladen der Seite
+        const pw = input.value;
+        const hashed = await hashPassword(pw);
+
+        console.log("Eingegeben:", pw);
+        console.log("Berechneter Hash:", hashed);
+        console.log("Gespeicherter Hash:", HASHED_PW);
+
+        if (hashed === HASHED_PW) {
+            overlay.remove();
+            sessionStorage.setItem(STORAGE_KEY, "1");
+        } else {
+            error.style.display = "block";
+            input.value = "";
+            input.focus();
+        }
+    });
+
+    input.addEventListener("input", function() {
+        error.style.display = "none";//fffghgfhjk
+    });
+
+    async function hashPassword(pw) {
+        const data = new TextEncoder().encode(pw);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+    }
+});
+
+</script>
 
 
 
