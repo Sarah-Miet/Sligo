@@ -601,53 +601,33 @@
 
 <div class="text-center">
         <h3 style=" color: green;" class="display-3">Fourth Week</h3>
-    </div>
+</div>
 
-    
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const HASHED_PW = "68772d2184abcd13e8644060375aaed6f83234871270d614f00d8b3a9d260768"; 
-    const STORAGE_KEY = "sligo_pw_ok";
-    const overlay = document.getElementById("pw-overlay");
-    const form = document.getElementById("pw-form");
-    const input = document.getElementById("pw-input");
-    const error = document.getElementById("pw-error");
 
-    if (sessionStorage.getItem(STORAGE_KEY) === "1") {
-        overlay.style.display = "none";
-    }
 
-    form.addEventListener("submit", async function(e) {
-        e.preventDefault(); // Verhindert das Neuladen der Seite
-        const pw = input.value;
-        const hashed = await hashPassword(pw);
 
-        console.log("Eingegeben:", pw);
-        console.log("Berechneter Hash:", hashed);
-        console.log("Gespeicherter Hash:", HASHED_PW);
 
-        if (hashed === HASHED_PW) {
-            overlay.style.display = "none";
-            sessionStorage.setItem(STORAGE_KEY, "1");
-        } else {
-            error.style.display = "block";
-            input.value = "";
-            input.focus();
-        }
-    });
 
-    input.addEventListener("input", function() {
-        error.style.display = "none";//fffghgfhjk
-    });
 
-    async function hashPassword(pw) {
-        const data = new TextEncoder().encode(pw);
-        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
-    }
-});
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
